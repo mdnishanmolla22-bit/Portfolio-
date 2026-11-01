@@ -1,7 +1,7 @@
 # Decap CMS configuration. Change repo: below to your GitHub username/repository, then see README.md.
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  repo: mdnishanmolla22-bit/Portfolio-
   branch: main
 media_folder: uploads
 public_folder: /uploads
