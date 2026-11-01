@@ -1,0 +1,161 @@
+{
+  "site": {
+    "pageTitle": "",
+    "description": "",
+    "topRole": "UI/UX Designer",
+    "topSub": "Digital Creator",
+    "avail": "Available for projects",
+    "mega": "PORTFOLIO",
+    "hello": "Hello, I'm",
+    "name": "Your Name",
+    "title": "UI/UX Designer",
+    "intro": "Ami meaningful digital experience design kori jeta user-friendly, shundor ar real shomoshya shomadhan kore. Research theke interface porjonto, shob ta ami nijer haate kori.",
+    "location": "Based in Dhaka, Bangladesh",
+    "tagline": "Turning ideas into powerful digital experiences.",
+    "points": [
+      "User-Centered Design",
+      "Pixel-Perfect Interfaces",
+      "Responsive Design"
+    ],
+    "photo": ""
+  },
+  "theme": {
+    "accent": "#e3262e",
+    "bg": "#070506"
+  },
+  "object3d": {
+    "enabled": true,
+    "shape": "blob",
+    "color": "#140b0c",
+    "accentColor": "#e3262e",
+    "wireframe": true,
+    "rings": true,
+    "speed": 1,
+    "size": 1,
+    "model": ""
+  },
+  "projects": [
+    {
+      "title": "Project One",
+      "cat": "Mobile App",
+      "role": "UI/UX Design",
+      "img": "",
+      "url": ""
+    },
+    {
+      "title": "Project Two",
+      "cat": "Booking App",
+      "role": "UI/UX Design",
+      "img": "",
+      "url": ""
+    },
+    {
+      "title": "Project Three",
+      "cat": "Streaming App",
+      "role": "UI/UX Design",
+      "img": "",
+      "url": ""
+    },
+    {
+      "title": "Website Landing Page",
+      "cat": "Website",
+      "role": "UI/UX Design",
+      "img": "",
+      "url": ""
+    }
+  ],
+  "education": [
+    {
+      "t": "Your degree or diploma name",
+      "y": "2020-24"
+    },
+    {
+      "t": "Course or certificate name",
+      "y": "2025-26"
+    }
+  ],
+  "eduNote": "UX Research | Prototyping | Responsive Design | Front-End",
+  "skills": [
+    "User Research",
+    "Wireframing",
+    "UI Design",
+    "Prototyping",
+    "Responsive Design",
+    "Design System",
+    "HTML & CSS",
+    "JavaScript",
+    "React JS",
+    "Figma",
+    "Three.js"
+  ],
+  "process": [
+    {
+      "t": "Discover",
+      "s": "Research & Analysis"
+    },
+    {
+      "t": "Plan",
+      "s": "User Flow & Wireframes"
+    },
+    {
+      "t": "Design",
+      "s": "High-Fidelity UI"
+    },
+    {
+      "t": "Prototype",
+      "s": "Interactive Testing"
+    },
+    {
+      "t": "Refine",
+      "s": "Feedback & Improvements"
+    },
+    {
+      "t": "Deliver",
+      "s": "Final Design & Handoff"
+    }
+  ],
+  "quote": {
+    "text": "Good design is not just how it looks, but how it works.",
+    "sign": "Your Name",
+    "cta": "Let's create something great together."
+  },
+  "contact": {
+    "heading": "Let's work together",
+    "text": "Ami ekhon notun kaj ar collaboration er jonno open. Chol shundor kichu baniye feli.",
+    "free": "Available for freelance",
+    "email": "yourname@example.com",
+    "waText": "Hi! I found your portfolio and would like to talk.",
+    "links": [
+      {
+        "type": "whatsapp",
+        "value": "01700000000",
+        "label": ""
+      },
+      {
+        "type": "linkedin",
+        "value": "yourname",
+        "label": ""
+      },
+      {
+        "type": "facebook",
+        "value": "yourname",
+        "label": ""
+      },
+      {
+        "type": "instagram",
+        "value": "yourname",
+        "label": ""
+      }
+    ]
+  },
+  "albums": [],
+  "bot": {
+    "on": true,
+    "ai": false,
+    "name": "Pixel",
+    "greeting": "",
+    "chips": [],
+    "extra": "",
+    "faq": []
+  }
+}

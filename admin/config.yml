@@ -1,0 +1,414 @@
+# Decap CMS configuration. Change repo: below to your GitHub username/repository, then see README.md.
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  branch: main
+media_folder: uploads
+public_folder: /uploads
+site_url: https://YOUR-SITE.netlify.app
+display_url: https://YOUR-SITE.netlify.app
+collections:
+- name: portfolio
+  label: My Portfolio
+  files:
+  - name: content
+    label: Everything on the website
+    file: content/site.json
+    format: json
+    fields:
+    - label: 1. Top bar and hero
+      name: site
+      widget: object
+      collapsed: false
+      fields:
+      - label: Your photo
+        name: photo
+        widget: image
+        required: false
+        hint: A cut-out photo with a transparent background (PNG) looks best.
+      - label: Top left, line 1
+        name: topRole
+        widget: string
+        required: false
+      - label: Top left, line 2
+        name: topSub
+        widget: string
+        required: false
+      - label: Top right badge
+        name: avail
+        widget: string
+        required: false
+      - label: Giant background word
+        name: mega
+        widget: string
+        required: false
+      - label: Script greeting
+        name: hello
+        widget: string
+        required: false
+      - label: Your name
+        name: name
+        widget: string
+        required: false
+      - label: Your role
+        name: title
+        widget: string
+        required: false
+      - label: Short intro
+        name: intro
+        widget: text
+        required: false
+      - label: Location
+        name: location
+        widget: string
+        required: false
+      - label: Tagline
+        name: tagline
+        widget: text
+        required: false
+      - label: Highlights
+        name: points
+        widget: list
+        required: false
+        collapsed: true
+        field:
+          label: Highlight
+          name: p
+          widget: string
+      - label: Browser tab title (optional)
+        name: pageTitle
+        widget: string
+        required: false
+      - label: Search engine description (optional)
+        name: description
+        widget: text
+        required: false
+    - label: 2. Colours
+      name: theme
+      widget: object
+      collapsed: true
+      fields:
+      - label: Accent colour
+        name: accent
+        widget: color
+        required: false
+      - label: Page background
+        name: bg
+        widget: color
+        required: false
+    - label: 3. 3D object
+      name: object3d
+      widget: object
+      collapsed: true
+      fields:
+      - label: Show the 3D object
+        name: enabled
+        widget: boolean
+        required: false
+        default: true
+      - label: Shape
+        name: shape
+        widget: select
+        required: false
+        options:
+        - label: Soft morphing blob
+          value: blob
+        - label: Twisted knot
+          value: knot
+        - label: Crystal
+          value: crystal
+        - label: Donut
+          value: torus
+        - label: My own 3D model (.glb)
+          value: model
+        default: blob
+      - label: Own 3D model (.glb file)
+        name: model
+        widget: file
+        required: false
+        hint: Only used when Shape is "My own 3D model". Keep it under 5 MB.
+      - label: Object colour
+        name: color
+        widget: color
+        required: false
+      - label: Glow colour
+        name: accentColor
+        widget: color
+        required: false
+      - label: Wireframe lines
+        name: wireframe
+        widget: boolean
+        required: false
+        default: true
+      - label: Rings around it
+        name: rings
+        widget: boolean
+        required: false
+        default: true
+      - label: Speed (0 stops it, 1 normal, 3 fast)
+        name: speed
+        widget: number
+        required: false
+        value_type: float
+        min: 0
+        max: 5
+        step: 0.1
+        default: 1
+      - label: Size (1 normal)
+        name: size
+        widget: number
+        required: false
+        value_type: float
+        min: 0.4
+        max: 1.8
+        step: 0.1
+        default: 1
+    - label: 4. Projects
+      name: projects
+      widget: list
+      required: false
+      collapsed: true
+      fields:
+      - label: Title
+        name: title
+        widget: string
+        required: false
+      - label: Category
+        name: cat
+        widget: string
+        required: false
+      - label: Your role
+        name: role
+        widget: string
+        required: false
+      - label: Cover image
+        name: img
+        widget: image
+        required: false
+      - label: Link (optional)
+        name: url
+        widget: string
+        required: false
+      summary: '{{fields.title}}'
+    - label: 5a. Education
+      name: education
+      widget: list
+      required: false
+      collapsed: true
+      fields:
+      - label: Title
+        name: t
+        widget: string
+        required: false
+      - label: Years
+        name: y
+        widget: string
+        required: false
+      summary: '{{fields.t}}'
+    - label: 5b. Education note
+      name: eduNote
+      widget: text
+      required: false
+    - label: 5c. Skills
+      name: skills
+      widget: list
+      required: false
+      collapsed: true
+      field:
+        label: Skill
+        name: s
+        widget: string
+    - label: 5d. Work process steps
+      name: process
+      widget: list
+      required: false
+      collapsed: true
+      fields:
+      - label: Step name
+        name: t
+        widget: string
+        required: false
+      - label: Short description
+        name: s
+        widget: string
+        required: false
+      summary: '{{fields.t}}'
+    - label: 5e. Quote panel
+      name: quote
+      widget: object
+      collapsed: true
+      fields:
+      - label: Quote
+        name: text
+        widget: text
+        required: false
+      - label: Signature
+        name: sign
+        widget: string
+        required: false
+      - label: Call to action
+        name: cta
+        widget: string
+        required: false
+    - label: 6. Contact
+      name: contact
+      widget: object
+      collapsed: true
+      fields:
+      - label: Heading
+        name: heading
+        widget: string
+        required: false
+      - label: Text
+        name: text
+        widget: text
+        required: false
+      - label: Availability label
+        name: free
+        widget: string
+        required: false
+      - label: Email
+        name: email
+        widget: string
+        required: false
+        hint: Visitors get Gmail and Mail app buttons that start a message to this address.
+      - label: Prefilled WhatsApp message
+        name: waText
+        widget: text
+        required: false
+      - label: Links
+        name: links
+        widget: list
+        required: false
+        collapsed: true
+        fields:
+        - label: Platform
+          name: type
+          widget: select
+          required: false
+          options:
+          - label: WhatsApp
+            value: whatsapp
+          - label: LinkedIn
+            value: linkedin
+          - label: Facebook
+            value: facebook
+          - label: Instagram
+            value: instagram
+          - label: Messenger
+            value: messenger
+          - label: Telegram
+            value: telegram
+          - label: GitHub
+            value: github
+          - label: Behance
+            value: behance
+          - label: Dribbble
+            value: dribbble
+          - label: X (Twitter)
+            value: x
+          - label: YouTube
+            value: youtube
+          - label: Other website
+            value: custom
+          default: whatsapp
+        - label: Number, username or link
+          name: value
+          widget: string
+          required: false
+          hint: 'WhatsApp: number like 01712345678 or 8801712345678. Others: just the username, or a full link.'
+        - label: Text shown (optional)
+          name: label
+          widget: string
+          required: false
+          hint: Leave empty to show it automatically.
+        summary: '{{fields.type}}: {{fields.value}}'
+    - label: 7. Photo albums
+      name: albums
+      widget: list
+      required: false
+      collapsed: true
+      fields:
+      - label: Album title
+        name: title
+        widget: string
+        required: false
+      - label: Description
+        name: desc
+        widget: text
+        required: false
+      - label: Cover photo (optional)
+        name: cover
+        widget: image
+        required: false
+        hint: Leave empty to use the first photo.
+      - label: Photos
+        name: photos
+        widget: list
+        required: false
+        collapsed: true
+        fields:
+        - label: Photo
+          name: image
+          widget: image
+          required: false
+        - label: Caption
+          name: cap
+          widget: string
+          required: false
+        summary: '{{fields.cap}}'
+      summary: '{{fields.title}}'
+    - label: 8. Chatbot
+      name: bot
+      widget: object
+      collapsed: true
+      fields:
+      - label: Show the chatbot
+        name: 'on'
+        widget: boolean
+        required: false
+        default: true
+      - label: Use Claude AI for answers
+        name: ai
+        widget: boolean
+        required: false
+        hint: Needs ANTHROPIC_API_KEY in Netlify. Off means the built-in answers are used.
+        default: false
+      - label: Bot name
+        name: name
+        widget: string
+        required: false
+      - label: Greeting message
+        name: greeting
+        widget: text
+        required: false
+        hint: Leave empty for the default.
+      - label: Quick question buttons
+        name: chips
+        widget: list
+        required: false
+        collapsed: true
+        field:
+          label: Question
+          name: c
+          widget: string
+      - label: Extra information
+        name: extra
+        widget: text
+        required: false
+        hint: Languages, rates, hobbies, awards, anything else visitors may ask.
+      - label: Question and answer pairs
+        name: faq
+        widget: list
+        required: false
+        collapsed: true
+        fields:
+        - label: Question
+          name: q
+          widget: string
+          required: false
+        - label: Answer
+          name: a
+          widget: text
+          required: false
+        summary: '{{fields.q}}'
