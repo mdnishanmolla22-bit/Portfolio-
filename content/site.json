@@ -61,15 +61,19 @@
     "title": "ASPIRING SOFTWARE ENGINEER AI & CYBERSECURITY ENTHUSIAST ",
     "description": ""
   },
-  "eduNote": "UX Research | Prototyping | Responsive Design | Front-End",
+  "eduNote": "Currently pursuing a B.Sc. in Computer Science & Engineering at Presidency University, with a passion for technology, AI, and Cybersecurity.",
   "education": [
     {
-      "t": "Your degree or diploma name",
-      "y": "2020-24"
+      "t": "SSC",
+      "y": "2020"
     },
     {
-      "t": "Course or certificate name",
-      "y": "2025-26"
+      "t": "HSC",
+      "y": "2021-2022"
+    },
+    {
+      "t": "B.sc In Computer Engineering & Science ",
+      "y": "2025- Running "
     }
   ],
   "theme": {
